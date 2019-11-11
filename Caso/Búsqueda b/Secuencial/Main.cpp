@@ -71,7 +71,7 @@ int main(void)
 			out10<<n<<"\t"<<(1000.00 * double(end-start))/double(CLOCKS_PER_SEC)<<"\n";
 		}
 			
-		else if(n == 1500)
+		else if(n == 15000)
 		{
 			out15<<n<<"\t"<<(1000.00 * double(end-start))/double(CLOCKS_PER_SEC)<<"\n";
 		}
