@@ -27,9 +27,16 @@ public class Main {
   
 	public static void main(String[] args) throws FileNotFoundException {
 		// TODO Auto-generated method stub
-		FileOutputStream os = new FileOutputStream("binary_search_secuencial_java.txt");
-		PrintStream ps = new PrintStream(os);
+		FileOutputStream os1 = new FileOutputStream("result1kjava.txt");
+		FileOutputStream os5 = new FileOutputStream("result5kjava.txt");
+		FileOutputStream os10 = new FileOutputStream("result10kjava.txt");
+		FileOutputStream os15 = new FileOutputStream("result15kjava.txt");
 		
+		
+		PrintStream ps1 = new PrintStream(os1);
+		PrintStream ps5 = new PrintStream(os5);
+		PrintStream ps10 = new PrintStream(os10);
+		PrintStream ps15 = new PrintStream(os15);
 		Main ob = new Main(); 
 		
 		int pruebas[] = {1000, 5000, 10000, 15000};
@@ -43,14 +50,30 @@ public class Main {
 			}
 			
 			Arrays.sort(arr);
-			int n = arr.length; 
+			int n = pruebas[i]; 
 	        int x = n - 1; 
 	        long start = System.nanoTime();
 	        int result = ob.binarySearch(arr, 0, n - 1, x); 
 	        long time = System.nanoTime() - start;
 	        System.out.println(pruebas[i] + "\t" +  (time/1000.00));
-	        ps.println( pruebas[i] + "\t" +  (time/1000.00));
+	        if(n == 1000)
+	        {
+	        	ps1.println( pruebas[i] + "\t" +  (time/1000.00));
+	        }
+	        else if(n == 5000)
+	        {
+	        	ps5.println( pruebas[i] + "\t" +  (time/1000.00));
+	        }
 	        
+	        else if(n == 10000)
+	        {
+	        	ps10.println( pruebas[i] + "\t" +  (time/1000.00));
+	        }
+	        
+	        else if(n == 15000)
+	        {
+	        	ps15.println( pruebas[i] + "\t" +  (time/1000.00));
+	        }
  		}
         
 	}
