@@ -87,7 +87,7 @@ int main()
 	
 		for (int i = 0; i < 4; i++) 
 		{
-			static clock_t start = clock();
+			clock_t start = clock();
 
 			pthread_join(threads[i], NULL); 
 			//cout<<i<<"\t"<<td.found<<"\n";
@@ -95,7 +95,7 @@ int main()
 			acumulador = acumulador + (1000.00 * double(end-start))/double(CLOCKS_PER_SEC);
 
 		}
-		cout<<acumulador<<"\n";
+		cout<<n<<"\t"<<acumulador<<"\n";
 		out<<n<<"\t"<<acumulador<<"\n";
 	}
 
