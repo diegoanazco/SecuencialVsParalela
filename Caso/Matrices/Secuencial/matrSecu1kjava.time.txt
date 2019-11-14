@@ -1,0 +1,2 @@
+Total time execution : 905513154222 ns
+Total time execution : 1.509490428088074E23 min
