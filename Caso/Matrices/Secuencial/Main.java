@@ -22,7 +22,7 @@ import com.panayotis.gnuplot.JavaPlot;
 public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException {		
-		int TAM = 500; //1000, 5000, 10000, 15000
+		int TAM = 1000; //1000, 5000, 10000, 15000
 		
 		String archivo = "matrSecu1kjava.txt";
         PrintWriter oS = new PrintWriter(archivo);
