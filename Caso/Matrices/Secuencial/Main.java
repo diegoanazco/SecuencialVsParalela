@@ -22,9 +22,9 @@ import com.panayotis.gnuplot.JavaPlot;
 public class Main {
 
 	public static void main(String[] args) throws FileNotFoundException {		
-		int TAM = 1000; //1000, 5000, 10000, 15000
+		int TAM = 500; //1000, 5000, 10000, 15000
 		
-		String archivo = "result1kjava.txt";
+		String archivo = "matrSecu1kjava.txt";
         PrintWriter oS = new PrintWriter(archivo);
         
 		for(int n=1; n<=TAM; n++) {
@@ -34,7 +34,7 @@ public class Main {
 		oS.close();
 		
 		JavaPlot p = new JavaPlot();
-		p.addPlot("\"matrices_secuencial.txt\" with lines");
+		p.addPlot("\"matrSecu1kjava.txt\" with lines");
 		p.plot();
 	}
 	
